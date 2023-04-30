@@ -9,6 +9,7 @@ import About from "./assets/components/About/About.jsx";
 import Statistics from "./assets/components/Statistics/Statistics.jsx";
 import Blog from "./assets/components/Blog/Blog.jsx";
 import AppliedJobs from "./assets/components/AppliedJobs/AppliedJobs.jsx";
+import ApplyHere from "./assets/components/ApplyHere/ApplyHere.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element:<Blog/>,
+      },
+      {
+        path: "/applyhere",
+        element:<ApplyHere/>,
       },
     ],
   },

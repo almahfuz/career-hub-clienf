@@ -1,59 +1,150 @@
-import React from "react";
+import { Avatar, Button, Dropdown, Navbar } from "flowbite-react";
+import { NavbarLink } from "flowbite-react/lib/esm/components/Navbar/NavbarLink";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import {
+  BoltIcon,
+  Bars3BottomRightIcon,
+  XMarkIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/solid";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div>
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+    <div className=" bg-gradient-to-r from-[rgba(160,120,252,0.05)] to-[rgba(152,115,255,0.05)]">
+      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-28 lg:px-14">
+        <div className="relative flex items-center justify-between">
+          {/* Logo Section */}
+          <Link to="/" className="inline-flex items-center">
+            <BoltIcon className="h-6 w-6 text-blue-500" />
+            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800">
+              CareerHUB
+            </span>
+          </Link>
+
+          {/* Nav Items Section */}
+          <ul className="items-center hidden space-x-8 lg:flex">
+
+            <li>
+              <NavLink
+                to="/appliedjobs"
+                className={({ isActive }) => (isActive ? "active" : "default")}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a>Statistics-drop</a>
-              </li>
-              <li>
-                <a>Applied Jobs</a>
-              </li>
-              <li>
-                <a>Blog</a>
-              </li>
-            </ul>
-          </div>
-          <a className="btn btn-ghost normal-case text-xl">Career Hub</a>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Statistics</a>
+                Applied Jobs
+              </NavLink>
             </li>
             <li>
-              <a>Applied Jobs</a>
+              <NavLink
+                to="/statistics"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Statistics
+              </NavLink>
             </li>
             <li>
-              <a>Blog</a>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Blog
+              </NavLink>
             </li>
           </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">Get started</a>
+
+          <NavLink
+            to="/applyhere"
+            className="rounded-lg px-5 py-3 bg-gradient-to-r from-[#7E90FE] to-[#a486f8]  text-white focus:text-white hover:text-white duration-300
+          }"
+          >
+            Star Applying
+          </NavLink>
+          {/* Mobile Navbar Section */}
+          <div className="lg:hidden">
+            {/* Dropdown Open Button */}
+            <button
+              aria-label="Open Menu"
+              title="Open Menu"
+              onClick={() => setIsMenuOpen(true)}
+            >
+              <Bars3BottomRightIcon className="w-5 text-gray-600" />
+            </button>
+            {isMenuOpen && (
+              <div className="absolute top-0 left-0 w-full z-10">
+                <div className="p-5 bg-white border rounded shadow-sm">
+                  {/* Logo & Button section */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div>
+                      <Link to="/" className="inline-flex items-center">
+                        <BoltIcon className="h-6 w-6 text-blue-500" />
+                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                          nextPage
+                        </span>
+                      </Link>
+                    </div>
+                    {/* Dropdown menu close button */}
+                    <div>
+                      <button
+                        aria-label="Close Menu"
+                        title="Close Menu"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <XMarkIcon className="w-5 text-gray-600" />
+                      </button>
+                    </div>
+                  </div>
+                  {/* Mobile Nav Items Section */}
+                  <nav>
+                    <ul className="space-y-4">
+                      <li>
+                        <Link to="/" className="default">
+                          Home
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link
+                          to="/appliedjobs"
+                          className={({ isActive }) =>
+                            isActive ? "active" : "default"
+                          }
+                        >
+                          Applied Jobs
+                        </Link>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/statistics"
+                          className={({ isActive }) =>
+                            isActive ? "active" : "default"
+                          }
+                        >
+                          Statistics
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/blog"
+                          className={({ isActive }) =>
+                            isActive ? "active" : "default"
+                          }
+                        >
+                          Blog
+                        </NavLink>
+                      </li>
+                    </ul>
+                    <NavLink
+                      to="/applyhere"
+                      className="rounded-lg px-5 py-3 bg-gradient-to-r from-[#7E90FE] to-[#a486f8]   text-white focus:text-white hover:text-white  duration-300
+                    "
+                    >
+                      Star Applying
+                    </NavLink>
+                  </nav>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

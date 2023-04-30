@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Main = () => {
+const ApplyHere = () => {
     return (
         <div>
             
-            <h2>This is main</h2>
         </div>
     );
 };
 
-export default Main;
+export default ApplyHere;
