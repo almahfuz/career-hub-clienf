@@ -1,9 +1,10 @@
 import React from 'react';
+import Home from '../Home/Home';
 
 const AppliedJobs = () => {
     return (
         <div>
-            <h2>This is Applied Job page</h2>
+            <Home></Home>
         </div>
     );
 };

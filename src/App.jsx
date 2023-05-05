@@ -5,17 +5,16 @@ import { Outlet } from 'react-router-dom'
 import Footer from './assets/components/Footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div>
       <Header></Header>
       <div className='min-h-[calc(100vh-136px)]'>
       <Outlet></Outlet>
       </div>
       
       <Footer></Footer>
-    </>
+    </div>
   )
 }
 

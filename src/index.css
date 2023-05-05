@@ -6,6 +6,6 @@
     @apply font-medium tracking-wide text-blue-700 transition-colors duration-300 hover:text-blue-400
 }
 
-.applyhereBtn {
-    @apply rounded-lg px-5 py-3 bg-gradient-to-r from-[#7E90FE] to-[#a486f8]  text-white  duration-300
+.Btn-button-indigo {
+    @apply bg-indigo-500 hover:bg-indigo-400 text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow  duration-300
 }

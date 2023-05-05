@@ -28,7 +28,7 @@ const Header = () => {
 
             <li>
               <NavLink
-                to="/appliedjobs"
+                to="/"
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
                 Applied Jobs
@@ -104,7 +104,7 @@ const Header = () => {
 
                       <li>
                         <Link
-                          to="/appliedjobs"
+                          to="/"
                           className={({ isActive }) =>
                             isActive ? "active" : "default"
                           }
