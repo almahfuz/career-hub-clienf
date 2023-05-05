@@ -2,8 +2,8 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div>
-            <div className='grid grid-cols-1 grid-flow-row md:grid-cols-2 gap-2 px-4 mx-4 my-3 items-center'>
+        <div className='bg-gradient-to-r from-[rgba(160,120,252,0.05)] to-[rgba(152,115,255,0.05)]'>
+            <div className='grid grid-cols-1 grid-flow-row md:grid-cols-2 gap-2 px-4  mx-4 py-4 items-center'>
                 <div className='p-4 order-2 md:order-1 '>
                     <div className='p-2 mb-1'>
                         <div className='sm:text-4xl  md:text-6xl  lg:text-7xl capitalize font-semibold tracking-wide pb-4'>One Step Closer To Your <span className='text-indigo-500'> Dream Job</span> </div>
