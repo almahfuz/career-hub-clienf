@@ -2,19 +2,14 @@ import React from 'react';
 import Home from '../Home/Home';
 import JobCategoryList from '../JobCategoryList/JobCategoryList';
 import FeaturedJobs from '../FeaturedJob/FeaturedJobs';
+import JobDetails from '../JobDetails/JobDetails';
 
 const AppliedJobs = () => {
 
     
     return (
         <div>
-            <div>
-            <Home></Home>
-            </div>
-            <div>
-                <JobCategoryList></JobCategoryList>
-                <FeaturedJobs></FeaturedJobs>
-            </div>
+            <JobDetails></JobDetails>
 
             
         </div>

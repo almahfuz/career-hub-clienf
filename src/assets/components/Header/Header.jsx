@@ -25,10 +25,17 @@ const Header = () => {
 
           {/* Nav Items Section */}
           <ul className="items-center hidden space-x-8 lg:flex">
-
-            <li>
+          <li>
               <NavLink
                 to="/"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/appliedJobs"
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
                 Applied Jobs

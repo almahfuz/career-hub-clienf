@@ -6,7 +6,7 @@ const JobCategoryList = () => {
   const [AvailableJob, setAvailableJob] = useState([]);
 
   useEffect(() => {
-    fetch("jobsProfiles.json")
+    fetch("JobCategoery.json")
       .then((res) => res.json())
       .then((data) => setAvailableJob(data));
   });
@@ -29,8 +29,8 @@ const JobCategoryList = () => {
               <div key={singleJob.id}>
                 <div className="rounded-md p-5 bg-gradient-to-r from-[rgba(126,144,254,0.05)] to-[rgba(152,115,255,0.05)]">
                   <img
-                    className="p-3 rounded-md bg-blue-100"
-                    src="/src/assets/components/icons/Frame-1.png"
+                    className="p-1 rounded-md bg-blue-100 h-12 w-12"
+                    src={singleJob.CategoryLogo}
                     alt=""
                   />
                   <p className="py-2 font-bold">{singleJob.CategoryTitle}</p>

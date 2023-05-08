@@ -12,6 +12,7 @@ import AppliedJobs from "./assets/components/AppliedJobs/AppliedJobs.jsx";
 import ApplyHere from "./assets/components/ApplyHere/ApplyHere.jsx";
 import JobCategoryList from "./assets/components/JobCategoryList/JobCategoryList.jsx";
 import { jobAndCartData } from "./assets/components/loaders/loader.js";
+import MainHome from "./assets/components/MainHome/MainHome.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element:<MainHome/>,
+      },
+      {
+        path: "/appliedJobs",
         element:<AppliedJobs/>,
       },
       {

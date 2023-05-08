@@ -1,0 +1,28 @@
+[
+
+    {
+        "id": "1",
+        "CategoryLogo": "https://images.ctfassets.net/ooa29xqb8tix/sHolxYPkMQO1gT5u6Aycp/bea05ce2b4fa806b7ede7a9d9dc16375/UXlogo.png?w=400&q=50?fm=jpg&q=50",
+        "CategoryTitle": "UX/UI Designer ",
+        "AvailableJob": "300 Jobs Available Jobs"
+    },
+    {
+        "id": "2",
+        "CategoryLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToz_rFCLg7GD_j6dSABbSfhjp9HlVAEnukTQ&usqp=CAU",
+        "CategoryTitle": "Engineering Job ",
+        "AvailableJob": "224+ Jobs Available"
+    },
+    {
+        "id": "3",
+        "CategoryLogo": "https://png.pngtree.com/element_pic/00/16/07/19578de327358a2.jpg",
+        "CategoryTitle": "Creative Design ",
+        "AvailableJob": "100+ Jobs Available"
+    },
+    {
+        "id": "4",
+        "CategoryLogo": "https://www.vhv.rs/dpng/d/503-5030100_sales-and-marketing-icon-png-circle-transparent-png.png",
+        "CategoryTitle": "Marketing & Sales ",
+        "AvailableJob": "150+ Jobs Available"
+
+    }
+]

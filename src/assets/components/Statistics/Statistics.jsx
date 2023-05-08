@@ -1,5 +1,6 @@
 import React from 'react';
 import JobDetails from '../JobDetails/JobDetails';
+import Marks from '../Marks/Marks';
 
 const Statistics = () => {
     return (
@@ -8,7 +9,7 @@ const Statistics = () => {
 
 
             <div>
-                <JobDetails></JobDetails>
+               <Marks></Marks>
             </div>
         </div>
     );

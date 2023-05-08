@@ -17,10 +17,7 @@
             "phone": "017500 00 000",
             "email": "info@gmail.com",
             "Address": "Dhanmondi 32, Sukrabad, Dhaka, Bangladesh"
-        }],
-        "CategoryLogo": "https://i.ibb.co/GnQsSsL/smart-home-v2-7.jpg",
-        "CategoryTitle": "Accountant ",
-        "AvailableJob": "300 Jobs Available Jobs"
+        }]
     },
 
     {
@@ -42,10 +39,7 @@
             "phone": "017500 00 000",
             "email": "info@gmail.com",
             "Address": "Dhanmondi 32, Sukrabad, Dhaka, Bangladesh"
-        }],
-        "CategoryLogo": "https://i.ibb.co/GnQsSsL/smart-home-v2-7.jpg",
-        "CategoryTitle": "Creative Design ",
-        "AvailableJob": "100+ Jobs Available"
+        }]
     },
     {
         "id": "623853b2239582e48409ccc6",
@@ -66,10 +60,7 @@
             "phone": "017500 00 000",
             "email": "info@gmail.com",
             "Address": "Dhanmondi 32, Sukrabad, Dhaka, Bangladesh"
-        }],
-        "CategoryLogo": "https://i.ibb.co/GnQsSsL/smart-home-v2-7.jpg",
-            "CategoryTitle": "Marketing & Sales ",
-            "AvailableJob": "150 Jobs Available"
+        }]
     },
     {
         "id": "623853b2cdda0d5bc294f791",
@@ -90,10 +81,7 @@
             "phone": "017500 00 000",
             "email": "info@gmail.com",
             "Address": "Dhanmondi 32, Sukrabad, Dhaka, Bangladesh"
-        }],
-        "CategoryLogo": "https://i.ibb.co/GnQsSsL/smart-home-v2-7.jpg",
-        "CategoryTitle": "Engineering Job ",
-        "AvailableJob": "224 Jobs Available"
+        }]
     },
     {
         "id": "623853b2736f19fd4eb8d44a",
@@ -114,10 +102,7 @@
             "phone": "017500 00 000",
             "email": "info@gmail.com",
             "Address": "Dhanmondi 32, Sukrabad, Dhaka, Bangladesh"
-        }],
-        "CategoryLogo": "https://i.ibb.co/GnQsSsL/smart-home-v2-7.jpg",
-        "CategoryTitle": "UX/UI Designer ",
-        "AvailableJob": "300 Jobs Available Jobs"
+        }]
     },
     {
         "id": "623853b2736f19fd4eb8d44b",
@@ -138,10 +123,7 @@
             "phone": "017500 00 000",
             "email": "info@gmail.com",
             "Address": "Dhanmondi 32, Sukrabad, Dhaka, Bangladesh"
-        }],
-        "CategoryLogo": "https://i.ibb.co/GnQsSsL/smart-home-v2-7.jpg",
-        "CategoryTitle": "HR ",
-        "AvailableJob": "120+ Jobs Available Jobs"
+        }]
     },
     {
         "id": "623853b2736f19fd4eb8d44c",
@@ -162,9 +144,6 @@
             "phone": "017500 00 000",
             "email": "info@gmail.com",
             "Address": "Dhanmondi 32, Sukrabad, Dhaka, Bangladesh"
-        }],
-        "CategoryLogo": "https://i.ibb.co/GnQsSsL/smart-home-v2-7.jpg",
-        "CategoryTitle": "Management ",
-        "AvailableJob": "160+ Jobs Available Jobs"
+        }]
     }
 ]
