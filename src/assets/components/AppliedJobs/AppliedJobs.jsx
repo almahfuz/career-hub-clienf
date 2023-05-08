@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from '../Home/Home';
 import JobCategoryList from '../JobCategoryList/JobCategoryList';
+import FeaturedJobs from '../FeaturedJob/FeaturedJobs';
 
 const AppliedJobs = () => {
 
@@ -11,9 +12,10 @@ const AppliedJobs = () => {
             <Home></Home>
             </div>
             <div>
-                
                 <JobCategoryList></JobCategoryList>
+                <FeaturedJobs></FeaturedJobs>
             </div>
+
             
         </div>
     );

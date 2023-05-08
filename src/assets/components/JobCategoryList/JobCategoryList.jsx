@@ -1,7 +1,8 @@
+import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
-const JobCategoryList = ({ jobs }) => {
+const JobCategoryList = () => {
   const [AvailableJob, setAvailableJob] = useState([]);
 
   useEffect(() => {
@@ -23,10 +24,9 @@ const JobCategoryList = ({ jobs }) => {
           </div>
         </div>
         <div>
-          <div className=" grid items-center grid-cols-4 gap-3 p-5">
+          <div className=" grid items-center grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-3 p-5">
             {AvailableJob.map((singleJob) => (
               <div key={singleJob.id}>
-                {" "}
                 <div className="rounded-md p-5 bg-gradient-to-r from-[rgba(126,144,254,0.05)] to-[rgba(152,115,255,0.05)]">
                   <img
                     className="p-3 rounded-md bg-blue-100"
@@ -34,12 +34,13 @@ const JobCategoryList = ({ jobs }) => {
                     alt=""
                   />
                   <p className="py-2 font-bold">{singleJob.CategoryTitle}</p>
-                  <p className="py-0 pb-1 font-light"> {singleJob.AvailableJob}</p>
+                  <p className="py-0 pb-1 font-light">
+                    {" "}
+                    {singleJob.AvailableJob}
+                  </p>
                 </div>
               </div>
             ))}
-
-           
           </div>
         </div>
       </div>
