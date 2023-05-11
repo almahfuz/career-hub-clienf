@@ -1,21 +1,31 @@
 import React from "react";
 import { MapPinIcon, EnvelopeIcon,PhoneIcon,CalendarDaysIcon,CurrencyDollarIcon } from '@heroicons/react/24/outline';
+import { useLoaderData } from "react-router-dom";
+
+export async function loader({ params }) {
+  const LoadJobDetails = await useLoaderData(params.id);
+  return { LoadJobDetails };
+}
 
 const JobDetails = () => {
+  const LoadGetJob = useLoaderData();
+  console.log(LoadGetJob.id);
+  // const{JobDescription,JobResponsibility,EducationalRequirements,Experiences} =JobDetail;
+
   return (
+    
     <div className="">
       <div className="h-[calc(100vh-25rem)] mb-4 flex items-center justify-center bg-gradient-to-r from-[rgba(146,126,192,0.05)] to-[rgba(113,101,146,0.05)]">
         <div className="text-3xl md:text-4xl font-bold">
           Job Details
         </div>
       </div>
-      {/* ----------- */}
       <div className="grid  md:grid-cols-3  md:p-8 p-5 gap-6">
         <div className=" md:col-span-2">
-        <div> <strong> Job Description:</strong> <p >  A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface. </p></div>
-            <div className="mt-4"><strong> Job Responsibility:</strong> <p> Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.</p></div>
-            <div className="mt-4"><strong> Educational Requirements:</strong> <p> Bachelor degree to complete any reputational university.</p></div>
-            <div className="mt-4"><strong> Experiences:</strong> <p> 2-3 Years in this field.</p> </div>
+        {/* <div> <strong> Job Description:</strong> <p > {JobDetail.JobDescription} </p></div> */}
+            {/* <div className="mt-4"><strong> Job Responsibility:</strong> <p> {JobResponsibility}</p></div>
+            <div className="mt-4"><strong> Educational Requirements:</strong> <p>{EducationalRequirements} </p></div>
+            <div className="mt-4"><strong> Experiences:</strong> <p> {Experiences}</p> </div> */}
            
         </div>
         <div>

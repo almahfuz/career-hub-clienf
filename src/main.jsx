@@ -11,42 +11,45 @@ import Blog from "./assets/components/Blog/Blog.jsx";
 import AppliedJobs from "./assets/components/AppliedJobs/AppliedJobs.jsx";
 import ApplyHere from "./assets/components/ApplyHere/ApplyHere.jsx";
 import JobCategoryList from "./assets/components/JobCategoryList/JobCategoryList.jsx";
-import { jobAndCartData } from "./assets/components/loaders/loader.js";
+import { productsAndCartData } from "./assets/components/loaders/loader.js";
 import MainHome from "./assets/components/MainHome/MainHome.jsx";
+import JobDetails from "./assets/components/JobDetails/JobDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // loader: jobAndCartData,
+    // loader: productsAndCartData,
     children: [
       {
         path: "/",
         element:<MainHome/>,
+        loader: productsAndCartData,
       },
       {
-        path: "/appliedJobs",
+        path: "jobDetails",
+        element: <JobDetails />,
+      },
+      {
+        path: "jobDetails/:id",
+        element: <JobDetails />,
+        loader: productsAndCartData,
+      },
+      {
+        path: "appliedJobs",
         element:<AppliedJobs/>,
       },
       {
-        path: "/header",
+        path: "header",
         element: <Header />,
       },
       {
-        path: "/about",
-        element:<About/>,
-      },
-      {
-        path: "/statistics",
+        path: "statistics",
         element:<Statistics/>,
       },
       {
-        path: "/blog",
+        path: "blog",
         element:<Blog/>,
-      },
-      {
-        path: "/applyhere",
-        element:<ApplyHere/>,
       },
       
     ],
