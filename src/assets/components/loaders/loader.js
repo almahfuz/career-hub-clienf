@@ -8,19 +8,19 @@ export const productsAndCartData = async () => {
   const jobsProducts = await productsData.json()
   //  console.log(jobsProducts);
 
-  const savedCart = getStoredCart()
-  const initialCart = []
-  for (const id in savedCart) {
+  const storeCart = getStoredCart()
+  const savedCart = []
+  for (const id in storeCart) {
     const foundProduct = jobsProducts.find(jobProduct => jobProduct.id === id)
     if (foundProduct) {
-      const quantity = savedCart[id]
+      const quantity = storeCart[id]
       foundProduct.quantity = quantity
-      initialCart.push(foundProduct)
+      savedCart.push(foundProduct)
     }
   }
 
   return {
     jobsProducts,
-    initialCart
+    savedCart
   }
 }

@@ -1,43 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Home from "../Home/Home";
 import JobCategoryList from "../JobCategoryList/JobCategoryList";
 import FeaturedJobs from "../FeaturedJob/FeaturedJobs";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import { CartContext, ProductContext } from "../../../App";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { MapPinIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
 
 const MainHome = () => {
-  // const productsJobs = useContext(ProductContext || []);
-  // const [cart, setCart] = useContext(CartContext || []);
+  const jobProductFeature = useLoaderData();
 
-  // const handleAddToCart = (product) => {
-  //   console.log(id);
-    // let newCart = [];
-    // const exists = cart.find(
-    //   (existingProduct) => existingProduct.id === product.id
-    // );
-    // if (!exists) {
-    //   product.quantity = 1;
-    //   newCart = [...cart, product];
-    // } else {
-    //   const rest = cart.filter(
-    //     (existingProduct) => existingProduct.id !== product.id
-    //   );
-    //   exists.quantity = exists.quantity + 1;
-    //   newCart = [...rest, exists];
-    // }
+  const [SeeMoreData, setSeeMoreData] =useState(false);
 
-    // setCart(newCart);
-    // addToDb(product.id);
-    // toast.success("Product Added! 🛒", { autoClose: 500 });
-  //};
+  const[FeaturedJobItems,setFeaturedJobItems ] =useState([]);
 
-  //   const navigation = useNavigate();
-  //   console.log(navigation.state);
-  //   if (navigation.state === 'loading') {
-  //     return <LoadingSpinner />
-  //   }
-  const { jobsProducts } = useLoaderData();
-  //   console.log(jobsProducts);
+  useEffect(()=>{
+    fetch('jobsProfiles.json')
+    .then(res => res.json())
+    .then(data=> setFeaturedJobItems(data));
+    
+  },[])
+
+  // useEffect(()=>{
+  //   setFeaturedJobItems(jobProductFeature);
+  // },[])
 
   return (
     <div>
@@ -46,7 +30,8 @@ const MainHome = () => {
       </div>
       <div>
         <JobCategoryList></JobCategoryList>
-        {/* <FeaturedJobs></FeaturedJobs> */}
+
+        {/* Featured job section  */}
         <div>
           <div className="pt-5 ">
             <div className="py-5 mx-4 my-3">
@@ -63,17 +48,16 @@ const MainHome = () => {
               </div>
               <div className="mt-5 pt-4">
                 <div className=" grid items-center grid-cols-1 md:grid-cols-2 gap-10 md:p-8 lg:p-8 p-2">
-                  {jobsProducts.map((JobItems) => (
+                  {FeaturedJobItems.slice(0, SeeMoreData ? SeeMoreData.length:4).map((FeatureJob) => (
                     <FeaturedJobs
-                      key={JobItems.id}
-                      JobItems={JobItems}
-                      // handleAddToCart={handleAddToCart}
-                    />
+                      key={FeatureJob.id}
+                      FeatureJob={FeatureJob}
+                    ></FeaturedJobs>
                   ))}
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <button className="Btn-button-indigo"> See All Jobs </button>
+                <button onClick={()=>setSeeMoreData(!SeeMoreData)} className="Btn-button-indigo">{SeeMoreData?"No more vacancy":"More jobs"} </button>
               </div>
             </div>
           </div>

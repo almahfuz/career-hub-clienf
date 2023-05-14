@@ -3,41 +3,36 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./assets/components/Home/Home.jsx";
 import Header from "./assets/components/Header/Header.jsx";
-import About from "./assets/components/About/About.jsx";
 import Statistics from "./assets/components/Statistics/Statistics.jsx";
 import Blog from "./assets/components/Blog/Blog.jsx";
 import AppliedJobs from "./assets/components/AppliedJobs/AppliedJobs.jsx";
-import ApplyHere from "./assets/components/ApplyHere/ApplyHere.jsx";
 import JobCategoryList from "./assets/components/JobCategoryList/JobCategoryList.jsx";
-import { productsAndCartData } from "./assets/components/loaders/loader.js";
 import MainHome from "./assets/components/MainHome/MainHome.jsx";
 import JobDetails from "./assets/components/JobDetails/JobDetails.jsx";
+import FeaturedJobs from "./assets/components/FeaturedJob/FeaturedJobs.jsx";
+import { productsAndCartData } from "./assets/components/loaders/loader.js";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // loader: productsAndCartData,
+    //loader: productsAndCartData,
     children: [
       {
         path: "/",
-        element:<MainHome/>,
-        loader: productsAndCartData,
+        element: <MainHome />,
+        //loader: () => fetch("jobsProfiles.json")
       },
       {
-        path: "jobDetails",
+        path: "details/:id",
         element: <JobDetails />,
-      },
-      {
-        path: "jobDetails/:id",
-        element: <JobDetails />,
-        loader: productsAndCartData,
+        loader: () => fetch("jobsProfiles.json"),
       },
       {
         path: "appliedJobs",
-        element:<AppliedJobs/>,
+        element: <AppliedJobs />,
+        loader: () => fetch("jobsProfiles.json")
       },
       {
         path: "header",
@@ -45,13 +40,12 @@ const router = createBrowserRouter([
       },
       {
         path: "statistics",
-        element:<Statistics/>,
+        element: <Statistics />,
       },
       {
         path: "blog",
-        element:<Blog/>,
+        element: <Blog />,
       },
-      
     ],
   },
 ]);

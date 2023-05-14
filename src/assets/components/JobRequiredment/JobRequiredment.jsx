@@ -6,57 +6,39 @@ import {
   CalendarDaysIcon,
   CurrencyDollarIcon,
 } from "@heroicons/react/24/outline";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
-const JobDetails = () => {
+const JobRequiredment = () => {
   const data = useLoaderData();
-  const [singleProduct, setSingleProduct] = useState({});
-   const { id } = useParams();
+  const [singleProduct, setSingleProduct] = useState({})
+    const { id } = useParams()
+    const findProduct = () => {
+        setSingleProduct(data.find((product) => product.id === id))
+      }
   
-  // const findProduct = () => {
-  //   setSingleProduct(data.find((product) => product.id === id));
-  // };
+      useEffect(() => {
+          findProduct()
+      }, [id])
 
-  // useEffect(() => {
-  //   findProduct();
-  // }, [id]);
+      console.log(singleProduct);
+      const{companyName,
+        JobDescription,
+        JobResponsibility,
+        EducationalRequirements,
+        Experiences,
+        salary,
+        jobTitle,
+        phone,
+        email,
+        Address
 
-  const findProduct = () => {
-    setSingleProduct(data.find((product) => product.id === id));
-  };
-  useEffect(() => {
-    findProduct(id) ;
-  }, [id]);
- 
-
-  // console.log(singleProduct);
-  const {
-    companyName,
-    JobDescription,
-    JobResponsibility,
-    EducationalRequirements,
-    Experiences,
-    salary,
-    jobTitle,
-    phone,
-    email,
-    Address,
-  } = singleProduct;
-
-  // singleProduct
-
-  const handleToApply = (id) => {
-    console.log(id);
-    //addToDb(id)
-  };
+      }=singleProduct;
 
   return (
     <div>
       <div className="">
         <div className="h-[calc(100vh-25rem)] mb-4 flex items-center justify-center bg-gradient-to-r from-[rgba(146,126,192,0.05)] to-[rgba(113,101,146,0.05)]">
-          <div className="text-3xl md:text-4xl font-bold">
-            Job Details: {companyName}
-          </div>
+          <div className="text-3xl md:text-4xl font-bold">Job Details: {companyName}</div>
         </div>
         <div className="grid  md:grid-cols-3  md:p-8 p-5 gap-6">
           <div className=" md:col-span-2">
@@ -69,8 +51,7 @@ const JobDetails = () => {
               <strong> Job Responsibility:</strong> <p> {JobResponsibility}</p>
             </div>
             <div className="mt-4">
-              <strong> Educational Requirements:</strong>{" "}
-              <p>{EducationalRequirements} </p>
+              <strong> Educational Requirements:</strong> <p>{EducationalRequirements} </p>
             </div>
             <div className="mt-4">
               <strong> Experiences:</strong> <p> {Experiences}</p>{" "}
@@ -106,21 +87,20 @@ const JobDetails = () => {
                     <span>
                       <EnvelopeIcon className="h-5 w-4 text-gray-500" />
                     </span>{" "}
-                    Email : {Address}
+                    Email : { Address}
                   </p>
                   <p className="py-2 pb-1 font-light flex gap-2">
                     <span>
                       <MapPinIcon className="h-5 w-4 pt-0.5 text-gray-500" />
                     </span>{" "}
-                    Address : {Address}
+                    Address : { Address}
                   </p>
                 </div>
                 <div className="mt-5">
-                  <Link onClick={() => {handleToApply(id)}}>
-                    <button className="Btn-button-indigo w-full">
-                      Apply Now
-                    </button>
-                  </Link>
+                  <button className="Btn-button-indigo w-full">
+                    {" "}
+                    Apply Now{" "}
+                  </button>
                 </div>
               </div>
             </div>
@@ -131,4 +111,4 @@ const JobDetails = () => {
   );
 };
 
-export default JobDetails;
+export default JobRequiredment;
