@@ -9,17 +9,17 @@ import Blog from "./assets/components/Blog/Blog.jsx";
 import AppliedJobs from "./assets/components/AppliedJobs/AppliedJobs.jsx";
 import MainHome from "./assets/components/MainHome/MainHome.jsx";
 import JobDetails from "./assets/components/JobDetails/JobDetails.jsx";
+import ErrorPage from "./assets/components/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    //loader: productsAndCartData,
+    errorElement:<ErrorPage/>,
     children: [
       {
         path: "/",
         element: <MainHome />,
-        //loader: () => fetch("jobsProfiles.json") done
       },
       {
         path: "details/:id",

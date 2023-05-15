@@ -22,13 +22,13 @@ const FeaturedJobs = ({ FeatureJob }) => {
         <div className="">
           <div className="rounded-md p-6 bg-gradient-to-r from-[rgba(196,202,242,0.05)] to-[rgba(152,115,255,0.05)]">
             <img
-              className="p-3 ps-0 rounded-md mt-2 h-20 w-48"
+              className=" ps-0 p-2 mt-2 h-28 w-28 object-contain "
               src={companyLogo}
               alt=""
             />
-            <div className="py-3 font-bold ">{jobTitle}</div>
+            <div className="font-bold ">{jobTitle}</div>
             <div className="py-0 pb-2 font-light">{companyName}</div>
-            <div className="py-2 ">
+            <div className="py-1 ">
               <button className="me-2 btn-sm btn  btn-outline btn-info">
                 {FullTime}
               </button>

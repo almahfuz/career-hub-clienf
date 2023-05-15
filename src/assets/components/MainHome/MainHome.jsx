@@ -57,7 +57,7 @@ const MainHome = () => {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <button onClick={()=>setSeeMoreData(!SeeMoreData)} className="Btn-button-indigo">{SeeMoreData?"No more vacancy":"More jobs"} </button>
+                <button onClick={()=>setSeeMoreData(!SeeMoreData)} className="Btn-button-indigo">{SeeMoreData?"No more":"More"} </button>
               </div>
             </div>
           </div>

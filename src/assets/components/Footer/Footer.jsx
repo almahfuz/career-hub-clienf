@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className="footer p-10 bg-base-200 text-base-content ">
         <div>
           <p>
-            <h1 className="text-2xl">CareerHub </h1>
+            <h1 className="text-2xl">Talent Hub </h1>
             <br />
             There are many variations of passages <br /> of Lorem Ipsum , but
             the <br /> majority have suffered alteration <br /> in some form.
@@ -42,8 +42,8 @@ const Footer = () => {
       <div className="divide-y bg-base-200 text-base-content ">
         <div></div>
         <div className="p-10 flex flex-col md:justify-between md:flex-row py-6 text-sm text-center text-gray-400">
-       <p>@2023 CareerHub. All Rights Reserved </p> 
-       <p> Powered by CareerHub</p>
+       <p>@2023 Talent Hub. All Rights Reserved </p> 
+       <p> Powered by Talent Hub</p>
         </div>
         
       </div>
