@@ -102,7 +102,7 @@ const JobDetails = () => {
                     <span>
                       <EnvelopeIcon className="h-5 w-4 text-gray-500" />
                     </span>{" "}
-                    Email : {Address}
+                    Email : {email}
                   </div>
                   <div className="py-2 pb-1 font-light flex gap-2">
                     <span>
