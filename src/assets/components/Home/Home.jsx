@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderImg from '../images/person-photo.png';
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
         <div className=" order-1 md:order-2">
           <img
             className="object-cover w-full "
-            src="/src/assets/components/images/person-photo.png"
+            src={HeaderImg}
             alt=""
           />
         </div>

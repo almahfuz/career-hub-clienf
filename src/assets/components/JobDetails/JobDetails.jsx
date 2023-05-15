@@ -112,7 +112,7 @@ const JobDetails = () => {
                   </div>
                 </div>
                 <Link className="mt-5" onClick={()=>handleToApply(id)} to="/appliedJobs">
-                    <button className="Btn-button-indigo w-full">
+                    <button className="mt-5 Btn-button-indigo w-full">
                       Apply Now
                     </button>
                   </Link>

@@ -22,13 +22,13 @@ const AppliedZone = ({ job }) => {
   } = job;
   return (
     <div>
-      <div className="mt-5 pt-1">
+      <div className="mt-1 ">
         <div className="items-center">
           <div className="flex items-center justify-between rounded-md m-3 p-6 bg-gradient-to-r from-[rgba(196,202,242,0.05)] to-[rgba(152,115,255,0.05)]">
             <div className=" flex items-center  justify-items-start gap-5 ">
               <div>
                 <img
-                  className="p-3 ps-0 rounded-md mt-2 object-cover h-48 w-40"
+                  className="p-3 ps-0 rounded-md mt-2 h-28 w-28 object-contain"
                   src={companyLogo}
                   alt=""
                 />
