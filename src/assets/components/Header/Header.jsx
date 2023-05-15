@@ -7,6 +7,8 @@ import {
   Bars3BottomRightIcon,
   XMarkIcon,
   ShoppingCartIcon,
+HomeModernIcon
+
 } from "@heroicons/react/24/solid";
 
 const Header = () => {
@@ -17,9 +19,9 @@ const Header = () => {
         <div className="relative flex items-center justify-between">
           {/* Logo Section */}
           <Link to="/" className="inline-flex items-center">
-            <BoltIcon className="h-6 w-6 text-blue-500" />
+            <HomeModernIcon className="h-6 w-6 text-blue-500" />
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800">
-              CareerHUB
+             Talent Hub
             </span>
           </Link>
 
@@ -60,7 +62,7 @@ const Header = () => {
           </ul>
 
           <NavLink
-            to="/applyhere"
+            to="/appliedJobs"
             className="rounded-lg px-5 py-3 bg-gradient-to-r from-[#7E90FE] to-[#a486f8]  text-white focus:text-white hover:text-white duration-300
           }"
           >
@@ -141,7 +143,7 @@ const Header = () => {
                       </li>
                     </ul>
                     <NavLink
-                      to="/applyhere"
+                      to="/appliedJobs"
                       className="rounded-lg px-5 py-3 bg-gradient-to-r from-[#7E90FE] to-[#a486f8]   text-white focus:text-white hover:text-white  duration-300
                     "
                     >

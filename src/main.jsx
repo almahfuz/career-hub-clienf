@@ -7,11 +7,8 @@ import Header from "./assets/components/Header/Header.jsx";
 import Statistics from "./assets/components/Statistics/Statistics.jsx";
 import Blog from "./assets/components/Blog/Blog.jsx";
 import AppliedJobs from "./assets/components/AppliedJobs/AppliedJobs.jsx";
-import JobCategoryList from "./assets/components/JobCategoryList/JobCategoryList.jsx";
 import MainHome from "./assets/components/MainHome/MainHome.jsx";
 import JobDetails from "./assets/components/JobDetails/JobDetails.jsx";
-import FeaturedJobs from "./assets/components/FeaturedJob/FeaturedJobs.jsx";
-import { productsAndCartData } from "./assets/components/loaders/loader.js";
 
 const router = createBrowserRouter([
   {
@@ -22,17 +19,17 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <MainHome />,
-        //loader: () => fetch("jobsProfiles.json")
+        //loader: () => fetch("jobsProfiles.json") done
       },
       {
         path: "details/:id",
         element: <JobDetails />,
-        loader: () => fetch("jobsProfiles.json"),
+        loader:() => fetch ('/jobsProfiles.json'),
       },
       {
         path: "appliedJobs",
         element: <AppliedJobs />,
-        loader: () => fetch("jobsProfiles.json")
+        loader:() => fetch ('/jobsProfiles.json'),
       },
       {
         path: "header",

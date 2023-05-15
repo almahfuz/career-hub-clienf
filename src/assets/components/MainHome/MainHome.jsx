@@ -6,7 +6,7 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { MapPinIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
 
 const MainHome = () => {
-  const jobProductFeature = useLoaderData();
+  // const jobProductFeature = useLoaderData();
 
   const [SeeMoreData, setSeeMoreData] =useState(false);
 

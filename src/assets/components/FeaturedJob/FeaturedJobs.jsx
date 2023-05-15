@@ -26,8 +26,8 @@ const FeaturedJobs = ({ FeatureJob }) => {
               src={companyLogo}
               alt=""
             />
-            <p className="py-3 font-bold ">{jobTitle}</p>
-            <p className="py-0 pb-2 font-light">{companyName}</p>
+            <div className="py-3 font-bold ">{jobTitle}</div>
+            <div className="py-0 pb-2 font-light">{companyName}</div>
             <div className="py-2 ">
               <button className="me-2 btn-sm btn  btn-outline btn-info">
                 {FullTime}
@@ -37,18 +37,18 @@ const FeaturedJobs = ({ FeatureJob }) => {
               </button>
             </div>
             <div className="mb-4 flex gap-4">
-              <p className="py-0 pb-1 font-light text-sm flex ">
+              <div className="py-0 pb-1 font-light text-sm flex ">
                 <span>
                   <MapPinIcon className="h-6 w-6 text-gray-500" />
                 </span>{" "}
                 {Location}
-              </p>
-              <p className="py-0 pb-1 font-light text-sm flex">
+              </div>
+              <div className="py-0 pb-1 font-light text-sm flex">
                 <span>
                   <CurrencyDollarIcon className="h-6 w-6 text-gray-500" />
                 </span>
                 {salary}
-              </p>
+              </div>
             </div>
             <Link to={`details/${id}`}>
               <button className="Btn-button-indigo">View Details</button>
